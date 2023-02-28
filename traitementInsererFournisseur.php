@@ -47,6 +47,7 @@ try{
 // }
 catch(PDOException $e){
 //echo 'erreur';
+//test
         die('<p> Erreur d insertion[' .$e->getCode().'] : ' .$e->getMessage().'</p>');
         }
 
