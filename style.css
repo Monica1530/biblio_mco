@@ -1,0 +1,136 @@
+h1 {
+    font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h2 {
+    background-color: #a0a0a0;
+    color: white;
+    justify-content: center;
+    text-align: center;
+
+}
+
+img {
+    width: 700px;
+    padding-left: 280px;
+}
+
+tr,
+td {
+    border: 0px solid white;
+    background-color: #a0a0a0;
+    padding: 15px;
+}
+
+#pied_de_page {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: flex-end;
+    padding-left: 0;
+    background-color: peachpuff;
+}
+
+fieldset h1 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+}
+
+.element_menu {
+    display: flex;
+    justify-content: center;
+}
+
+/* h1 {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    align-items: self-end;
+    padding-left: 0;
+    background-color: peachpuff;
+}
+
+fieldset h1 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.formulaire {
+    display: flex;
+    justify-content: center;
+} */
+.formConnex {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    background-color: beige;
+}
+
+.connex {
+    background-color: antiquewhite;
+}
+
+.connex h2 {
+    text-align: center;
+    justify-content: center;
+    font-size: large;
+    background: none;
+    color: black
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 15px;
+}
+
+.sInscrire {
+    display: flex;
+    /* flex-direction: column;
+    justify-content: right; */
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    background-color: beige;
+    width: 100%;
+    margin: auto 0;
+    padding: inherit;
+}
+
+.sInscrire h2 {
+    background-color: cornsilk;
+    color: black;
+    font-size: x-large;
+}
