@@ -25,11 +25,11 @@ try{
     $telephone = $_POST['telephone'];
     $url = $_POST['url'];
     $mail = $_POST['mail'];
-    $fax = $_POST['fax'];
+    $reseau = $_POST['reseau'];
 
 
     $requete = $bd->prepare("INSERT INTO fournisseur (Code_fournisseur, Raison_sociale, Rue_fournisseur, 
-    Code_postal, Localite, Pays, Tel_fournisseur, Url_fournisseur, Email_fournisseur, Fax_fournisseur) VALUES (:codeFournisseur, :raisonSociale, :rueFournisseur, :codePostal, :localite, :pays, :telFournisseur, :urlFournisseur, :emailFournisseur, :faxFournisseur)");
+    Code_postal, Localite, Pays, Tel_fournisseur, Url_fournisseur, Email_fournisseur, Reseau_fournisseur) VALUES (:codeFournisseur, :raisonSociale, :rueFournisseur, :codePostal, :localite, :pays, :telFournisseur, :urlFournisseur, :emailFournisseur, :reseauFournisseur)");
 
     $requete->bindValue(':codeFournisseur', $code);
     $requete->bindValue(':raisonSociale',$raisonSociale);
@@ -40,7 +40,7 @@ try{
     $requete->bindValue(':telFournisseur', $telephone);
     $requete->bindValue(':urlFournisseur', $url);
     $requete->bindValue(':emailFournisseur', $mail);
-    $requete->bindValue(':faxFournisseur', $fax);
+    $requete->bindValue(':reseauFournisseur', $reseau);
     
     $requete->execute();
 }

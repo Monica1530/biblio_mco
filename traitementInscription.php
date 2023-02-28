@@ -28,7 +28,7 @@ try{
     //     echo "Le mot de pass ne correspond pas";
     // }
     // j'insère les données du formulaire d'inscription dans la base de donnée 
-    $requete = $bd->prepare("INSERT INTO users WHERE Nom:nom, Prenom:prenom, Identifiant:identifiant, Mdp:mdp");
+    $requete = $bd->prepare("INSERT INTO user WHERE Nom:nom, Prenom:prenom, Identifiant:identifiant, Mdp:mdp");
         $requete->bindValue(':nom', $nom);
         $requete->bindValue(':prenom', $prenom);
         $requete->bindValue(':identifiant', $ident);

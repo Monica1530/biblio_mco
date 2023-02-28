@@ -21,7 +21,7 @@ try{
     $login = $_POST['login'];
     $mdp = $_POST['pass'];
 
-    $requete = $bd->prepare("SELECT Nom, Prenom FROM users WHERE Identifiant=:identifiant AND Mdp=:mdp");
+    $requete = $bd->prepare("SELECT Nom, Prenom FROM user WHERE Identifiant=:identifiant AND Mdp=:mdp");
 
 $requete->bindValue(':identifiant', $login);
 $requete->bindValue(':mdp', $mdp);

@@ -39,7 +39,7 @@ $langue = $_POST['langue'];
 
     // Pour plus de sécurité, utiliser bindValue :
 
-    $requete = $bd->prepare("UPDATE Livres SET ISBN=:isbn, Titre=:titre, Theme=:theme, Nb_Pages=:nbPages, Format=:format, NomAuteur=:nomAuteur, prenomAuteur=:prenomAuteur, 
+    $requete = $bd->prepare("UPDATE Livre SET ISBN=:isbn, Titre=:titre, Theme=:theme, Nb_Pages=:nbPages, Format=:format, NomAuteur=:nomAuteur, prenomAuteur=:prenomAuteur, 
     Editeur=:editeur, AnneeEdition=:anneeEdition, Prix=:prix, Langue=:langue WHERE Id=:id");
     $requete->bindValue(':isbn', $isbn);
     $requete->bindValue(':titre', $titre);

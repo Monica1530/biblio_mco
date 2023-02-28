@@ -31,7 +31,7 @@ if (!empty($_GET['id'])) {
     
     // Je récupère le livres de ma base de donnée avec l'Id que j'ai reçue
     try {
-        $requete = $bd->prepare("SELECT * FROM livres WHERE Id = $id");
+        $requete = $bd->prepare("SELECT * FROM livre WHERE Id = $id");
         $requete->execute();
         $book = $requete->fetch(PDO::FETCH_OBJ);
     }

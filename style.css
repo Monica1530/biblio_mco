@@ -43,6 +43,7 @@ fieldset h1 {
     display: flex;
     justify-content: center;
     align-self: center;
+    width: max-content;
 }
 
 .formulaire {
@@ -134,3 +135,7 @@ fieldset h1 {
     color: black;
     font-size: x-large;
 }
+
+/* fieldset h1{
+
+} */

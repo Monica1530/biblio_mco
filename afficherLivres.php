@@ -14,11 +14,11 @@ try {
 
 // Je récupère les livres de ma base de donnée
 try {
-    $requete = $bd->prepare('SELECT * FROM livres');
+    $requete = $bd->prepare('SELECT * FROM livre');
     $requete->execute();
     echo "<table border='1'>";
     while($obj = $requete->fetch(PDO::FETCH_OBJ)){
-        echo '<tr>'. '<td>' . $obj->Id . '</td>' .'<td>' . $obj->Titre . '</td><td>' . $obj->Theme .'</td> '. '<td>' . $obj->Nb_pages . '</td>' . '<td>' . $obj->Format . '<td>' . '<td>' . $obj->NomAuteur .'</td> '. '<td>' . $obj->PrenomAuteur . '</td>' .'<td>' . $obj->Editeur . '<td>' . '<td>' . $obj->AnneeEdition .'</td> '. '<td>' . $obj->Prix . '</td>'. '<td>'. $obj->Langue . '</td>' ."<td>" .  "<a href ='deleteBook.php?id=" . $obj->Id . "'>Effacer</a><td>" . "<td><a href ='updateBook.php?id=".$obj->Id."'>Modifier</a><td>" . '</tr>';
+        echo '<tr>'. '<td>' . $obj->id . '</td>' .'<td>' . $obj->Titre . '</td><td>' . $obj->Theme .'</td> '. '<td>' . $obj->Nb_pages . '</td>' . '<td>' . $obj->Format . '<td>' . '<td>' . $obj->NomAuteur .'</td> '. '<td>' . $obj->PrenomAuteur . '</td>' .'<td>' . $obj->Editeur . '<td>' . '<td>' . $obj->AnneeEdition .'</td> '. '<td>' . $obj->Prix . '</td>'. '<td>'. $obj->Langue . '</td>' ."<td>" .  "<a href ='deleteBook.php?id=" . $obj->id . "'>Effacer</a><td>" . "<td><a href ='updateBook.php?id=".$obj->id."'>Modifier</a><td>" . '</tr>';
 }
     echo "</table>";
 }

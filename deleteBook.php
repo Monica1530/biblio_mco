@@ -16,7 +16,7 @@ try {
     $id = $_GET['id'];
 
     try {
-        $requete = $bd->prepare('DELETE FROM livres WHERE id = ?');
+        $requete = $bd->prepare('DELETE FROM livre WHERE id = ?');
         $requete->execute(array($id));
     } catch(PDOException $e) {
         die('<p> Erreur[' .$e->getCode () .'] : ' . $e->getMessage ().'</p>');

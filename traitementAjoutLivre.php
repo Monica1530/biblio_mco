@@ -26,7 +26,7 @@ try {
      $prix = $_POST['prix'];
      $langue = $_POST['langue'];
 
-    $requete = $bd->prepare("INSERT INTO livres(ISBN, Titre, Theme, Nb_pages, Format, NomAuteur, PrenomAuteur, Editeur, AnneeEdition, Prix, Langue)
+    $requete = $bd->prepare("INSERT INTO livre(ISBN, Titre, Theme, Nb_pages, Format, NomAuteur, PrenomAuteur, Editeur, AnneeEdition, Prix, Langue)
     VALUES(:isbn,:titre,:theme,:nbpages,:format,:nomauteur,:prenomauteur,:editeur,:anneeedition,:prix,:langue)");
     
     $requete->bindValue(':isbn', $isbn);

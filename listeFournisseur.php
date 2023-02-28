@@ -20,7 +20,7 @@ try {
     while($obj = $requete->fetch(PDO::FETCH_OBJ)){
         echo '<tr>'. '<td>' . $obj->Id_fournisseur . '</td>' .'<td>' . $obj->Code_fournisseur . '</td><td>' . $obj->Raison_sociale .'</td> '. '<td>' . $obj->Rue_fournisseur .
          '</td>' . '<td>' . $obj->Code_postal . '</td>' . '<td>' . $obj->Localite .'</td> '. '<td>' . $obj->Pays . '</td>' .'<td>' . $obj->Tel_fournisseur . '</td>' . '<td>' .
-          $obj->Url_fournisseur .'</td> '. '<td>' . $obj->Email_fournisseur . '</td>'. '<td>'. $obj->Fax_fournisseur . '</td>' ."<td>" .  "<a href ='insererFournisseur.php?id=" .
+          $obj->Url_fournisseur .'</td> '. '<td>' . $obj->Email_fournisseur . '</td>'. '<td>'. $obj->Reseau_fournisseur . '</td>' ."<td>" .  "<a href ='insererFournisseur.php?id=" .
            "'>Inserer</a></td>" . '</tr>';
 }
     echo "</table>";
