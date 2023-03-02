@@ -29,12 +29,12 @@
                     <input type="password" size="20" id="pass" name="pass" required>
                 </p>
                 <label for="role"></label>
-
+<!-- 
                 <select name="role" id="role_select" required>
                     <option value="">--Please choose an option--</option>
                     <option value="admin">Admin</option>
                     <option value="user">User</option>
-                </select>
+                </select> -->
 
                 <div class="button">
                     <input type="submit" value="connexion"></input>

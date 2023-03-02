@@ -7,25 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
     <header>
+    <?php
+            session_start();
+            $nom = $_SESSION['nom'];
+            $prenom = $_SESSION['prenom'];
+            $role = $_SESSION['role'];
+
+            echo "Bonjour " . $nom . " " . $prenom;
+            // echo ' voici le role ' . $role;
+            ?>
+
         <nav id="menu">
             <div class="element_menu">
                 <a href="index.php">Accueil</a>
 
                 <select onchange="la(this.value)">
-                    <option disabled selected>Selection</option>
+                    <option disabled selected>Livres</option>
                     <option value="afficherLivres.php">Afficher les livres</option>
-                    <option value="insererLivre.php">Ajouter un livre</option>
-                </select>
+                    <?php if($role == 1){?>
+                        <option value="insererLivre.php">Ajouter un livre</option>
+                        <option value="updateBook.php">Modifier un livre</option>
+                        <?php 
+                    }
+                    ?>
+                    </select>
+
                 <select onchange="lo(this.value)">
                     <option disabled selected>Fournisseurs</option>
                     <option value="listeFournisseur.php">Liste des fournisseurs</option>
-                    <option value="insererFournisseur.php">Insérer un fournisseur</option>
-                    <!-- <option value="insererLivre.php">Lister un fournisseur</option> -->
+                        <?php if($role == 1){?>
+                        <option value="insererFournisseur.php">Insérer un fournisseur</option>
+                        <option value="afficheRaisonSociale.php">Raison sociale</option>
+                        <option value="localite.php">Afficher par localité</option>
+                        <option value="pays.php">Afficher par pays</option>
+                        <?php
+                        }
+                        ?>
+                    </select>
+                    <!-- <option value="insererFournisseur.php">Insérer un fournisseur</option>
+                    <option value="afficheRaisonSociale.php">Raison Sociale</option>
+                    <option value="localite.php">Localité</option>
+                    <option value="pays.php">Pays</option> -->
+
+        <!-- <option value="insererLivre.php">Lister un fournisseur</option> -->
                 </select>
 
                 <form action="index.php" method="post">
@@ -45,13 +75,7 @@
             </div>
         </nav>
         <h3>
-            <?php
-            session_start();
-            $nom = $_SESSION['nom'];
-            $prenom = $_SESSION['prenom'];
-            echo "Bonjour " . $nom . " " . $prenom;
-            ?>
-
+            
 
             <!-- <div class="user-widget">
                  <::?php if (isset($_SESSION['deconnexion']) && $_SESSION['deconnexion'] !== null) : ?>
