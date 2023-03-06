@@ -57,8 +57,5 @@ $langue = $_POST['langue'];
     $requete->execute();
 }
 header("Location: afficherLivres.php");
-//      } catch(PDOException $e){
 
-//       die('<p> Erreur[' .$e->getCode().'] : ' .$e->getMessage().'</p>');
-//      }
-
+?>

@@ -47,6 +47,4 @@ catch (PDOException $e) {
         // echo "Inscription réussie";
         header("Location: index.php");
     }
-   
-
-//header('location = accueil.php ');
+   ?>

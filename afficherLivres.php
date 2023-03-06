@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-// c'est bon
+
 try {
     $bd = new PDO ('mysql:host=localhost;dbname=bdp5', 'root', ''); 
     $bd->query("SET NAMES 'utf8'");
@@ -37,7 +37,7 @@ try {
     while($obj = $requete->fetch(PDO::FETCH_OBJ)){
         //~ Si l'utilisateur est un administrateur, afficher les deux dernières colonnes
         if ($_SESSION['role'] === 1) {
-            //& $obj recuperé avec la fonction ci dessus (ATTENTION array pas SENSIBLE a la CASSE)
+            //& $obj récuperé avec la fonction ci-dessus (ATTENTION l'array n'est pas SENSIBLE à la CASSE)
             //~ Les valeurs que j'affiche dans le tableau
             echo '<tr class="value">';
             echo '<td class="td">' . $obj->ISBN . "  " . '</td>';
@@ -51,8 +51,9 @@ try {
             echo '<td class="td">' . $obj->AnneeEdition . " " . '</td>';
             echo '<td class="td">' . $obj->Prix . " " . '</td>';
             echo '<td class="td">' . $obj->Langue . " " . '</td>';
-            echo '<td><a href="modifierLigne.php?id=' . $obj->id . '"><i class="fa-solid fa-pen"></i></a></td>';
-            echo "<td style='text-align:center;'><a href='javascript:void(0)' onclick='confirmDelete(" . $obj->id . ")' '><i class='fa-solid fa-trash'></i></a></td>";
+            echo '<td><a href="updateBook.php?id=' . $obj->id . '"><i class="fa-solid fa-pen"></i></a></td>';
+            // echo "<td style='text-align:center;'><a href='javascript:void(0)' onclick='confirmDelete(" . $obj->id . ")' '><i class='fa-solid fa-trash'></i></a></td>";
+            echo '<td><a href="deleteBook.php?id=' . $obj->id . '"><i class="fa-solid fa-trash"></i></a></td>';
     } else {
                 echo '<tr class="value">';
             echo '<td class="td">' . $obj->ISBN . "  " . '</td>';
@@ -84,3 +85,4 @@ catch(PDOException $e){
 echo '<img class"" src="image\livre.png">';
 
 include('footer.php');
+?>

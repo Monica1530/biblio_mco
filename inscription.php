@@ -11,33 +11,31 @@
 
 <body>
 
-    <h1>Inscription</h1>
-    <fieldset class="sInscrire">
-
-
-        <form action="traitementInscription.php" method="POST">
+                <h1>Inscription</h1>
+    <form class="formInscription" method="POST" action="traitementInscription.php" >
+            <fieldset class="sInscrire">
 
             <h2>Entrez vos informations pour vous inscrire</h2>
             <p>
                 <label for="nom">Nom :</label>
-                <input type="text" size="20" id="nom" name="nom" required>
+                <input type="text" id="nom" name="nom" required>
             </p>
             <p>
                 <label for="prenom">Prénom :</label>
-                <input type="text" size="20" id="prenom" name="prenom" required>
+                <input type="text" id="prenom" name="prenom" required>
             </p>
 
             <p>
                 <label for="ident">Identifiant :</label>
-                <input type="text" size="20" id="ident" name="ident" required>
+                <input type="text" id="ident" name="ident" required>
             </p>
             <p>
                 <label for="pass">Mot de passe :</label>
-                <input type="password" size="20" id="pass" name="pass" required>
+                <input type="password" id="pass" name="pass" required>
             </p>
             <p>
                 <label for="pass">Confirmation Mot de passe :</label>
-                <input type="password" size="20" id="pass2" name="pass2" required>
+                <input type="password" id="pass2" name="pass2" min-length=8 max-length=30 required>
             </p>
             <div class="button">
                 <button type="submit">S'inscrire</button>

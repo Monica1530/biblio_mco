@@ -22,11 +22,11 @@
                 <h2>Entrez vos identifiants pour vous connecter</h2>
                 <p>
                     <label for="login">Login :</label>
-                    <input type="text" size="20" id="login" name="login" required>
+                    <input type="text" size="" id="login" name="login" required>
                 </p>
                 <p>
                     <label for="pass">Mot de passe :</label>
-                    <input type="password" size="20" id="pass" name="pass" required>
+                    <input type="password" size="" id="pass" name="pass" required>
                 </p>
                 <label for="role"></label>
 <!-- 

@@ -34,7 +34,7 @@ fieldset {
     display: flex;
     flex-direction: column;
     /* width: 20%; */
-    width: auto;
+    /* width: 25%; */
     align-items: flex-end;
     padding-left: 0;
     background-color: peachpuff;
@@ -50,6 +50,7 @@ fieldset h1 {
 .formulaire {
     display: flex;
     justify-content: center;
+    text-align: end;
 }
 
 .element_menu {
@@ -57,37 +58,6 @@ fieldset h1 {
     justify-content: center;
 }
 
-/* h1 {
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-}
-
-h2 {
-    display: flex;
-    justify-content: center;
-    font-size: xx-large;
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    align-items: self-end;
-    padding-left: 0;
-    background-color: peachpuff;
-}
-
-fieldset h1 {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
-
-.formulaire {
-    display: flex;
-    justify-content: center;
-} */
 .formConnex {
     display: flex;
     flex-direction: column;
@@ -117,18 +87,16 @@ fieldset h1 {
     padding-top: 15px;
 }
 
-.sInscrire {
+.formInscription {
     display: flex;
-    /* flex-direction: column;
-    justify-content: right; */
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
     align-items: center;
-    height: auto;
-    background-color: beige;
-    width: 100%;
-    margin: auto 0;
-    padding: inherit;
+}
+
+.sInscrire {
+
+    width: 50%;
+    align-items: center;
 }
 
 .sInscrire h2 {
@@ -149,3 +117,21 @@ fieldset h1 {
 /* fieldset h1{
 
 } */
+label {
+    font-weight: bold;
+}
+
+.element_menu a {
+    text-decoration: none;
+    border: 1px solid black;
+    background-color: cornsilk;
+    border-radius: 5px;
+    padding: 0.5%;
+    color: darkred;
+}
+
+.index input {
+    color: rgb(73, 84, 94);
+    font-weight: bold;
+    font-style: italic;
+}

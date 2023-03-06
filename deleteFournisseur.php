@@ -16,11 +16,12 @@ try {
     $id = $_GET['id'];
 
     try {
-        $requete = $bd->prepare('DELETE FROM livre WHERE id = ?');
+        $requete = $bd->prepare('DELETE FROM fournisseur WHERE id_fournisseur = ?');
         $requete->execute(array($id));
     } catch(PDOException $e) {
         die('<p> Erreur[' .$e->getCode () .'] : ' . $e->getMessage ().'</p>');
     }
 
-   header('Location: afficherLivres.php');
-    ?>
+   header('Location: listeFournisseur.php');
+    
+?>

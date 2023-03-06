@@ -1,6 +1,6 @@
 <?php
 include('header.php');
-// c'est bon
+
 try {
     $bd = new PDO ('mysql:host=localhost;dbname=bdp5', 'root', ''); 
     $bd->query("SET NAMES 'utf8'");
@@ -46,6 +46,8 @@ try {
             echo '<td class="td">' . $obj->Url_fournisseur . " " . '</td>';
             echo '<td class="td">' . $obj->Email_fournisseur . " " . '</td>';
             echo '<td class="td">' . $obj->Reseau_fournisseur . " " . '</td>';
+            echo '<td><a href="updateFournisseur.php?id=' . $obj->Id_fournisseur . '"><i class="fa-solid fa-pen"></i></a></td>';
+            echo '<td><a href="deleteFournisseur.php?id=' . $obj->Id_fournisseur . '"><i class="fa-solid fa-trash"></i></a></td>';
         // echo '<tr>'. '<td>' . $obj->Id_fournisseur . '</td>' .'<td>' . $obj->Code_fournisseur . '</td><td>' . $obj->Raison_sociale .'</td> '. '<td>' . $obj->Rue_fournisseur .
         //  '</td>' . '<td>' . $obj->Code_postal . '</td>' . '<td>' . $obj->Localite .'</td> '. '<td>' . $obj->Pays . '</td>' .'<td>' . $obj->Tel_fournisseur . '</td>' . '<td>' .
         //   $obj->Url_fournisseur .'</td> '. '<td>' . $obj->Email_fournisseur . '</td>'. '<td>'. $obj->Reseau_fournisseur . '</td>' ."<td>" .  "<a href ='insererFournisseur.php?id=" .
@@ -66,3 +68,4 @@ catch(PDOException $e){
 echo '<img class"" src="image\livre.png">';
 
 include('footer.php');
+?>

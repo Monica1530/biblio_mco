@@ -30,24 +30,24 @@
                 <select onchange="la(this.value)">
                     <option disabled selected>Livres</option>
                     <option value="afficherLivres.php">Afficher les livres</option>
-                    <?php if($role == 1){?>
+                    <?php if($role == 1):?>
                         <option value="insererLivre.php">Ajouter un livre</option>
                         <option value="updateBook.php">Modifier un livre</option>
                         <?php 
-                    }
+                    endif
                     ?>
                     </select>
 
                 <select onchange="lo(this.value)">
                     <option disabled selected>Fournisseurs</option>
                     <option value="listeFournisseur.php">Liste des fournisseurs</option>
-                        <?php if($role == 1){?>
+                        <?php if($role == 1):?>
                         <option value="insererFournisseur.php">Insérer un fournisseur</option>
                         <option value="afficheRaisonSociale.php">Raison sociale</option>
                         <option value="localite.php">Afficher par localité</option>
                         <option value="pays.php">Afficher par pays</option>
                         <?php
-                        }
+                        endif
                         ?>
                     </select>
                     <!-- <option value="insererFournisseur.php">Insérer un fournisseur</option>
@@ -58,7 +58,7 @@
         <!-- <option value="insererLivre.php">Lister un fournisseur</option> -->
                 </select>
 
-                <form action="index.php" method="post">
+                <form class="index" action="index.php" method="post">
                     <input type="submit" name="deconnexion" value="Déconnexion">
                 </form>
                 <script>

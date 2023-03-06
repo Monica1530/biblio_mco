@@ -1,5 +1,5 @@
 <?php
-// Ok
+
 try {
     $bd = new PDO ('mysql:host=localhost;dbname=bdp5', 'root', ''); 
     $bd->query("SET NAMES 'utf8'");
@@ -54,4 +54,4 @@ catch(PDOException $e){
 
         header("Location: accueil.php");
 
-
+?>

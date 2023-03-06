@@ -14,7 +14,7 @@ try {
 ?>
 <form action="afficheRaisonSociale.php" method="post">
         <fieldset class="fieldset">
-            <legend><b>Recherche d'un fournisseur par sa raison social</b></legend>
+            <legend><b>Recherche d'un fournisseur par sa raison sociale</b></legend>
             <label for="Raison_sociale">Nom du fournisseur : </label>
             <select id="Raison_sociale" name="Raison_sociale" onchange="validerSelection()">
                 <option value="">Sélectionnez un fournisseur</option>

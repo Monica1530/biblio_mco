@@ -63,3 +63,4 @@ catch (PDOException $e) {
 
     
 header('Location: accueil.php ');
+?>
